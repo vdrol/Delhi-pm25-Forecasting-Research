@@ -1,0 +1,9 @@
+train 50328  val 8736  test 10944 (test winter 5808)
+physics beta = 0.141, c = -0.001
+E1 1 winter (Oct 2022-Feb 2023) {'AI only': 77.1, 'Physics + AI': 74.4, 'Physics + AI (residual)': 70.2, 'AI residual on persistence (control)': 69.6, 'Persistence': 76.4, 'n_train': 3601}
+E1 1 year {'AI only': 68.6, 'Physics + AI': 69.9, 'Physics + AI (residual)': 68.2, 'AI residual on persistence (control)': 67.1, 'Persistence': 76.4, 'n_train': 8736}
+E1 2 years {'AI only': 67.0, 'Physics + AI': 68.2, 'Physics + AI (residual)': 67.3, 'AI residual on persistence (control)': 65.7, 'Persistence': 76.4, 'n_train': 17496}
+E1 3 years {'AI only': 66.6, 'Physics + AI': 69.5, 'Physics + AI (residual)': 67.8, 'AI residual on persistence (control)': 65.8, 'Persistence': 76.4, 'n_train': 26256}
+E1 5.75 years (all) {'AI only': 67.0, 'Physics + AI': 69.9, 'Physics + AI (residual)': 69.0, 'AI residual on persistence (control)': 66.7, 'Persistence': 76.4, 'n_train': 50328}
+E2 {'AI only': 125.1, 'Physics + AI': 124.9, 'Physics + AI (residual)': 99.7, 'AI residual on persistence (control)': 102.4, 'Physics only': 86.7, 'Persistence': 76.4}
+E3 {'AI only': (78.53199148980711, 0.38478471833779915), 'Physics + AI': (81.68825726504444, 0.1521247093579043), 'Physics only (box model)': (98.2454667425938, 0.0), 'box_model_slope_lnVC': -0.732895660789695}

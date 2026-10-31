@@ -1,0 +1,43 @@
+train 50328  val 8736  test 10944 (test winter 5808)
+physics beta = 0.141, c = -0.001
+rows: train 50328 val 4344 test 10944 test missing ERA5: 0
+ERA5 box model beta = 0.111 (ground-sensor beta = 0.141)
+subset                          all  severe  winter
+model                                              
+M0 Persistence                 59.2   140.2    76.4
+M2 AI only (ground sensors)    52.2   146.6    68.7
+M3 AI + ground physics         54.9   155.6    72.4
+N1 AI + ERA5 data              50.1   140.7    65.8
+N2 AI + ERA5 physics           52.4   148.9    69.1
+N3 ERA5 box model only         68.0   160.8    89.1
+N4 AI corrects ERA5 box model  50.5   141.7    66.5
+{
+ "Q1 new data: N1 - M2": {
+  "mean": -2.8821059409185628,
+  "lo95": -3.8813988658099063,
+  "hi95": -1.841392029120284
+ },
+ "Q2 physics on new data: N2 - N1": {
+  "mean": 3.1005621480579957,
+  "lo95": -0.05198562920921109,
+  "hi95": 6.209071595041624
+ },
+ "N2 - M2": {
+  "mean": 0.21845620713943317,
+  "lo95": -3.040912917276443,
+  "hi95": 3.4364425379940258
+ },
+ "Q3 anchor: N4 - M2": {
+  "mean": -2.2909971412203793,
+  "lo95": -4.77485804653568,
+  "hi95": 0.05987540724320269
+ },
+ "old: M3 - M2": {
+  "mean": 3.69668797037189,
+  "lo95": 1.7892013407997394,
+  "hi95": 5.946350394484244
+ }
+}
+one winter of training {'M2 AI only (ground sensors)': 86.2, 'N1 AI + ERA5 data': 82.6, 'N2 AI + ERA5 physics': 80.8, 'N4 AI corrects ERA5 box model': 76.4, 'M0 Persistence': 76.4}
+no winter in training {'M2 AI only (ground sensors)': 129.5, 'N1 AI + ERA5 data': 129.3, 'N2 AI + ERA5 physics': 125.7, 'N4 AI corrects ERA5 box model': 108.0, 'M0 Persistence': 76.4}
+daily winter corr with ln PM: {'vc_ground': -0.527, 'vc_era5': -0.419, 'h_ground': -0.554, 'blh': -0.359}  ground h vs ERA5 BLH (hourly, log) r = 0.858

@@ -1,0 +1,54 @@
+train 50328  val 8736  test 10944 (test winter 5808)
+physics beta = 0.141, c = -0.001
+M2_AI_only winter RMSE by seed: [66.9 67.4 66.6 66.5 66.5]
+M3_Physics+AI winter RMSE by seed: [69.9 69.8 70.  70.3 70.3]
+M4_Physics+AI_residual winter RMSE by seed: [69.3 68.9 68.8 69.1 69.3]
+C_Placebo winter RMSE by seed: [67.5 67.2 67.8 68.  67.1]
+M5_AI_residual_on_persistence winter RMSE by seed: [66.6 66.7 66.9 67.1 66.4]
+subset                         Test, all seasons  Test, severe hours (PM2.5>250)  Test, winter (Oct-Feb)
+model                                                                                                   
+C_Placebo                                   51.2                           142.7                    67.4
+M0_Persistence                              59.2                           140.2                    76.4
+M1_Physics_only                             65.7                           150.6                    85.5
+M2_AI_only                                  50.7                           140.3                    66.7
+M3_Physics+AI                               53.1                           149.4                    70.0
+M4_Physics+AI_residual                      52.4                           146.1                    69.0
+M5_AI_residual_on_persistence               50.7                           138.8                    66.6
+{
+ "M3_vs_M2": {
+  "mean": 3.2819902637772413,
+  "lo95": 1.3061884141127862,
+  "hi95": 5.563720255633806,
+  "p_better": 0.0
+ },
+ "M4_vs_M2": {
+  "mean": 2.3261002181380834,
+  "lo95": 0.012712161664675042,
+  "hi95": 4.95231376730805,
+  "p_better": 0.0245
+ },
+ "C_vs_M2": {
+  "mean": 0.7203309882445497,
+  "lo95": 0.040659734042875866,
+  "hi95": 1.3978290072261967,
+  "p_better": 0.0175
+ },
+ "M2_vs_M0": {
+  "mean": -9.85585088777544,
+  "lo95": -17.882238763142883,
+  "hi95": -0.9090937641501577,
+  "p_better": 0.9845
+ },
+ "M1_vs_M0": {
+  "mean": 9.083600336309898,
+  "lo95": 5.775791014728683,
+  "hi95": 12.601626397746402,
+  "p_better": 0.0
+ },
+ "M4_vs_M5": {
+  "mean": 2.334593715828475,
+  "lo95": 0.27048353750387266,
+  "hi95": 4.559572389397274,
+  "p_better": 0.012
+ }
+}
