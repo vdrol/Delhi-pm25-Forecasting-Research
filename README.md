@@ -23,3 +23,9 @@ https://archive-api.open-meteo.com/v1/archive?latitude=28.61&longitude=77.21&sta
 - physics.py   mixing height and ventilation from ground sensors
 - common.py    shared data preparation and model helpers (imported by 03-07)
 Results are deterministic: re-running gives the same numbers.
+
+## Data sources and licences
+- data/delhi_hourly.csv is derived from Central Pollution Control Board data archived at
+  https://github.com/Vonter/india-cpcb-aqi, licensed under the Open Database License (ODbL 1.0).
+- data/era5_delhi_openmeteo.csv contains ERA5 reanalysis data (Copernicus Climate Change Service)
+  downloaded from Open-Meteo (https://open-meteo.com).
